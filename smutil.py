@@ -35,7 +35,17 @@ font = {'family' : 'normal',
 matplotlib.rc('font', **font)
 
 
+def create_directory(dirName):
+    if not os.path.exists(dirName):
+        os.mkdir(dirName)
+        print("Directory: {}/ Created ".format(dirName))
+    else:    
+        print("Directory: {}/  already exists".format(dirName))
+    
+    
 
+def line_break(headline='', pat='*' ,rep=20):
+    print(f'{pat}'*rep+" | {} | ".format(headline) + f'{pat}'*rep)
 
 def asMinutes(s):
     m = math.floor(s / 60)
